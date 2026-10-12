@@ -36,7 +36,7 @@ def get_ai_response(mode, messages):
     try:
         full_messages = [{"role": "system", "content": system_prompt}] + messages
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=full_messages,
             max_tokens=1024,
             temperature=0.7
